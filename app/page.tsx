@@ -1,6 +1,8 @@
 import { About } from '@/components/about'
 import { Banner } from '@/components/banner'
 import { Experience } from '@/components/experience'
+import { Footer } from '@/components/footer'
+import { Projects } from '@/components/projects'
 
 export default function Home() {
   return (
@@ -9,6 +11,8 @@ export default function Home() {
         <Banner />
         <About />
         <Experience />
+        <Projects />
+        <Footer />
       </div>
     </main>
   )
