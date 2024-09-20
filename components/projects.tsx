@@ -1,23 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-type Repo = {
-  id: number
-  name: string
-  full_name: string
-  description: string
-  private: boolean
-}
-
-async function getRepos() {
-  const data = await fetch('https://api.github.com/users/queirozlc/repos')
-  return (await data.json()) as Repo[]
-}
-
 export async function Projects() {
-  const repos = await getRepos()
-  const publicRepos = repos.filter((repo) => !repo.private)
-
   return (
     <section id="projects">
       <h2 className="text-white font-black text-center text-6xl pt-9">
